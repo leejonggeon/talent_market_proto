@@ -4,12 +4,11 @@ const express = require("express");
 //express 모듈을 가져온다.
 const app = express();
 //새로운 express 앱을 가져온다.
-const port = 3000;
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const config = require("./config/key");
-const { auth } = require("./middleware/auth");
+const { auth } = require("../middleware/auth");
 const { User } = require("./models/User");
 
 //application/x-www-form-urlencoded 로 분석된 데이터를 가져오게함.
@@ -32,6 +31,8 @@ monggoose
 //에러 방지
 
 app.get("/", (req, res) => res.send("안녕하세요!!!"));
+
+app.get("/api/hello", (req, res) => res.send("hello world!!!"));
 
 //회원 가입할 때 필요한 정보를 client에서 가져오면
 //그것들을 데이터베이스에 넣어준다.
@@ -98,6 +99,17 @@ app.get("/api/users/auth", auth, (req, res) => {
     image: req.user.image,
   });
 });
+
+app.get("/api/users/logout", auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).send({
+      success: true,
+    });
+  });
+});
+
+const port = 5000;
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
