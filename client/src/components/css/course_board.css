@@ -1,0 +1,79 @@
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.post_element {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(216, 150, 172);
+  border-color: rgba(88, 18, 18, 0.2);
+  padding: 80px 0px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+table {
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.container {
+  /*width: 750px;
+  padding: auto auto;*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+element.style {
+  margin: auto;
+  padding: auto;
+  border: auto;
+}
+
+.small_container {
+  border: solid 0.5px #d1d1d1;
+  padding: 5px 0px;
+  padding: 15px;
+}
+
+.searchbar {
+  box-sizing: border-box;
+  line-height: 20px;
+  min-height: 1px;
+  margin-bottom: 20px;
+  padding: 5px;
+  position: relative;
+  text-size-adjust: 100%;
+  width: 750px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0);
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.title-align {
+  margin: auto;
+}
+
+.hidden-xs {
+  margin: auto auto;
+  border: auto auto;
+  padding: auto auto;
+}
