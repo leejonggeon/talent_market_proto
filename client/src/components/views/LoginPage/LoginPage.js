@@ -3,6 +3,9 @@ import Axios from "axios";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../_action/user_action";
 import { withRouter } from "react-router-dom";
+import "../../css/styles.css";
+import { Link } from "react-router-dom";
+import StatusBar from "../StatusBar/StatusBar";
 function LoginPage(props) {
   const dispatch = useDispatch();
 
@@ -31,6 +34,7 @@ function LoginPage(props) {
     dispatch(loginUser(body)).then((response) => {
       if (response.payload.loginSuccess) {
         //로그인이 성공을 하면
+        
         props.history.push("/");
         //루트 page (landing page)로 보낸다.
       } else {
@@ -40,20 +44,24 @@ function LoginPage(props) {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
+    <div>
+      <StatusBar />
+
+      <header className="welcome-header">
+        <h1 className="welcome-header__title">
+          블록핑크에 오신 걸 환영합니다.
+        </h1>
+        <p className="welcome-header__text">
+          블록핑크 계정이 있으시다면, 이메일 계정을 이용해 로그인 해주세요.
+        </p>
+      </header>
       <form
+        className="login-signup_form"
         style={{ display: "flex", flexDirection: "column" }}
         onSubmit={onSubmitHandler}
       >
         <label>Email</label>
+
         <input type="email" value={Email} onChange={onEmailHandler} />
         <label>Password</label>
         <input type="password" value={Password} onChange={onPassWordHandler} />

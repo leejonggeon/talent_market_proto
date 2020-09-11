@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../../../_action/user_action";
 import { withRouter } from "react-router-dom";
+import "../../css/styles.css";
+import StatusBar from "../StatusBar/StatusBar";
 function RegisterPage(props) {
   const dispatch = useDispatch();
 
@@ -51,19 +53,17 @@ function RegisterPage(props) {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <form
-        style={{ display: "flex", flexDirection: "column" }}
-        onSubmit={onSubmitHandler}
-      >
+    <div>
+      <StatusBar />
+
+      <header className="welcome-header">
+        <h1 className="welcome-header__title">블록핑크 계정 만들기</h1>
+        <p className="welcome-header__text">
+          이메일을 사용해 간편하게 가입할 수 있습니다.
+        </p>
+      </header>
+
+      <form className="login-signup_form" onSubmit={onSubmitHandler}>
         <label>Email</label>
         <input type="email" value={Email} onChange={onEmailHandler} />
 

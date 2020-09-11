@@ -7,7 +7,7 @@ import LandingPage from "./components/views/LandingPage/LandingPage";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
-
+//import "./components/views/LoginPage/login-signup.css";
 function App() {
   return (
     <Router>
