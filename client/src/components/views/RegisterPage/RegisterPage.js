@@ -4,9 +4,9 @@ import { registerUser } from "../../../_action/user_action";
 import { withRouter } from "react-router-dom";
 import "../../css/styles.css";
 import StatusBar from "../StatusBar/StatusBar";
+
 function RegisterPage(props) {
   const dispatch = useDispatch();
-
   //state 만들기
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");

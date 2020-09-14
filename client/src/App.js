@@ -7,6 +7,9 @@ import LandingPage from "./components/views/LandingPage/LandingPage";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
+import Profile from "./components/views/Profile/Profile";
+import course_board from "./components/views/course_board/course_board";
+
 //import "./components/views/LoginPage/login-signup.css";
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
             path="/register"
             component={Auth(RegisterPage, false)}
           ></Route>
+          <Route exact path="/profile" component={Profile}></Route>
+          <Route exact path="/course_board" component={course_board}></Route>
         </Switch>
       </div>
     </Router>

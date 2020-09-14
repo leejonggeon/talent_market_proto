@@ -109,9 +109,9 @@ app.get("/api/users/logout", auth, (req, res) => {
   });
 });
 
-const port = 8090;
+const port = 5000;
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
-//8090 port에서 시작s
+//5000 port에서 시작s
