@@ -60,3 +60,11 @@
   color: rgb(216, 150, 172);
   font-weight: bold;
 }
+
+.link:hover {
+  color: black;
+}
+
+.a {
+  color: rgb(216, 150, 172);
+}
