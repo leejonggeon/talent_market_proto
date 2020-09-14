@@ -6,7 +6,7 @@ export default function (SpecificComponent, option, adminRoute = null) {
   function AuthenticationCheck(props) {
     //option : null -> 아무나 출입 가능
     //true -> 로그인한 유저만 출입가능
-    //false -> 로그인하지 않은 유저만 출입가능
+    // false -> 로그인하지 않은 유저만 출입가능
 
     const dispatch = useDispatch();
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import StatusBar from "../StatusBar/StatusBar";
 import "../../css/styles.css";
+
 function LandingPage(props) {
   useEffect(() => {
     axios.get("/api/hello").then((response) => {
@@ -58,37 +59,37 @@ function LandingPage(props) {
           <div className="popular-boxes__column">
             <div className="popular-box box1">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">Home Cooking</div>
+              <div className="popular-box__name">#인기수업</div>
             </div>
             <div className="popular-box box2">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">Pastry Recipes</div>
+              <div className="popular-box__name">#디자인</div>
             </div>
             <div className="popular-box box5">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">집밥 요리</div>
+              <div className="popular-box__name">#실무역량</div>
             </div>
             <div className="popular-box box6">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">프로그래밍</div>
+              <div className="popular-box__name">#뷰티</div>
             </div>
           </div>
           <div className="popular-boxes__column">
             <div className="popular-box box3">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">For Babies</div>
+              <div className="popular-box__name">#영상</div>
             </div>
             <div className="popular-box box7">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">건축</div>
+              <div className="popular-box__name">#외국어</div>
             </div>
             <div className="popular-box box8">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">스포츠</div>
+              <div className="popular-box__name">#음악</div>
             </div>
             <div className="popular-box box4">
               <div className="popular-box__cover"></div>
-              <div className="popular-box__name">Smoothie Recipes</div>
+              <div className="popular-box__name">#기타</div>
             </div>
           </div>
         </div>
